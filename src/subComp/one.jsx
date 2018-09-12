@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
+import Form from './Form';
 
 const styles = theme => ({
   root: {
@@ -16,7 +16,6 @@ const styles = theme => ({
     maxWidth: '100%',
     marginLeft: '7px',
     marginRight: '7px',
-
   },
   control: {
     padding: theme.spacing.unit * 2,
@@ -49,49 +48,7 @@ class One extends Component {
         <Grid container justify="center" className={classes.root} spacing={16}>
           <Grid item lg={8} xs={12}>
             <Paper>
-              <form className={classes.container} noValidate autoComplete="off">
-                <Grid container>
-                  <Grid item xs={6}>
-                    <TextField
-                      id="fname"
-                      label="First Name"
-                      className={classes.textField}
-                      margin="normal"
-                    />
-                  </Grid>
-                  <Grid item xs={6}>
-                    <TextField
-                      id="Lname"
-                      label="Last Name"
-                      className={classes.textField}
-                      margin="normal"
-                    />
-                  </Grid>
-                  <TextField
-                    id="uncontrolled"
-                    label="Uncontrolled"
-                    defaultValue="foo"
-                    className={classes.textField}
-                    margin="normal"
-                  />
-                  <TextField
-                    required
-                    id="required"
-                    label="Required"
-                    defaultValue="Hello World"
-                    className={classes.textField}
-                    margin="normal"
-                  />
-                  <TextField
-                    error
-                    id="error"
-                    label="Error"
-                    defaultValue="Hello World"
-                    className={classes.textField}
-                    margin="normal"
-                  />
-                </Grid>
-              </form>
+              <Form />
             </Paper>
           </Grid>
         </Grid>
