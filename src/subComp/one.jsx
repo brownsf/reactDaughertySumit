@@ -23,11 +23,6 @@ const styles = theme => ({
   header: {
     textAlign: 'center',
   },
-
-  bottom: {
-    position: 'absolute',
-    bottom: '0px',
-  },
 });
 
 class One extends Component {
@@ -45,7 +40,13 @@ class One extends Component {
             <h2>Pretty Designed Header Image</h2>
           </Grid>
         </Grid>
-        <Grid container justify="center" className={classes.root} spacing={16}>
+        <Grid
+          container
+          style={{ minHeight: '500px' }}
+          justify="center"
+          className={classes.root}
+          spacing={16}
+        >
           <Grid item lg={8} xs={12}>
             <Paper>
               <Form />
@@ -54,7 +55,7 @@ class One extends Component {
         </Grid>
         <Grid container justify="center" className={classes.bottom} spacing={16}>
           <Grid item xs={12} className={classes.header}>
-            <h2>Pretty Designed Header Image</h2>
+            <h2>Pretty Designed Footer</h2>
           </Grid>
         </Grid>
       </React.Fragment>

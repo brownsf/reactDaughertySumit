@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
+  },
+  button: {
+    margin: theme.spacing.unit,
   },
   paper: {
     height: 140,
@@ -106,6 +110,15 @@ class Form extends Component {
                   fullWidth
                   margin="normal"
                 />
+              </Grid>
+            </Grid>
+            <Grid item xs={12}>
+              <Grid container spacing={16}>
+                <Grid item xs={3}>
+                  <Button className={classes.button} variant="contained" color="primary">
+                    Submit
+                  </Button>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
