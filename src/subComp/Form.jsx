@@ -40,6 +40,7 @@ class Form extends Component {
 
   render() {
     const { classes } = this.props;
+    const saveField = field => e => this.setState({ [field]: e.target.value });
     return (
       <form className={classes.container} noValidate autoComplete="off">
         <Grid container spacing={16}>
@@ -49,10 +50,19 @@ class Form extends Component {
               label="First Name"
               className={classes.textField}
               margin="normal"
+              onChange={saveField('fname')}
+              value={this.state.fname}
             />
           </Grid>
           <Grid item md={3} xs={6}>
-            <TextField id="Lname" label="Last Name" className={classes.textField} margin="normal" />
+            <TextField
+              id="Lname"
+              label="Last Name"
+              className={classes.textField}
+              margin="normal"
+              onChange={saveField('lname')}
+              value={this.state.lname}
+            />
           </Grid>
           <Grid item xs={7}>
             <TextField
@@ -61,6 +71,8 @@ class Form extends Component {
               label="Email"
               className={classes.textField}
               margin="normal"
+              onChange={saveField('email')}
+              value={this.state.email}
             />
           </Grid>
           <Grid item xs={7}>
@@ -69,7 +81,9 @@ class Form extends Component {
               label="Address"
               className={classes.textField}
               fullWidth
+              value={this.state.address}
               margin="normal"
+              onChange={saveField('address')}
             />
           </Grid>
           <Grid item xs={7}>
@@ -78,7 +92,9 @@ class Form extends Component {
               label="Address Line 2"
               className={classes.textField}
               fullWidth
+              value={this.state.address2}
               margin="normal"
+              onChange={saveField('address2')}
             />
           </Grid>
           <Grid item xs={12}>
@@ -90,6 +106,8 @@ class Form extends Component {
                   className={classes.textField}
                   fullWidth
                   margin="normal"
+                  value={this.state.city}
+                  onChange={saveField('city')}
                 />
               </Grid>
               <Grid item xs={2}>
@@ -98,7 +116,9 @@ class Form extends Component {
                   label="State"
                   className={classes.textField}
                   fullWidth
+                  value={this.state.state}
                   margin="normal"
+                  onChange={saveField('state')}
                 />
               </Grid>
 
@@ -106,9 +126,11 @@ class Form extends Component {
                 <TextField
                   id="uncontrolled"
                   label="Zip"
+                  value={this.state.zip}
                   className={classes.textField}
                   fullWidth
                   margin="normal"
+                  onChange={saveField('zip')}
                 />
               </Grid>
             </Grid>
