@@ -19,6 +19,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import One from "./subComp/one";
 import Two from "./subComp/two";
+import OneAlert from "./renderProps/one";
 
 const drawerWidth = 240;
 
@@ -181,6 +182,7 @@ class App extends Component {
           <main className={classes.content}>
             <Route path="/compound-comp/1" component={One} />
             <Route path="/compound-comp/2" component={Two} />
+            <Route path="/render-props/1" component={OneAlert} />
           </main>
         </CssBaseline>
       </Router>
