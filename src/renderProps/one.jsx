@@ -6,7 +6,7 @@ import AlertProps from "./alertProps";
 class One extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {open: false, open2: false};
     this.handleClickOpen = this.handleClickOpen.bind(this);
     this.handleClose = this.handleClose.bind(this);
   }

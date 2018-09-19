@@ -17,9 +17,14 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import ListSubheader from "@material-ui/core/ListSubheader";
 import One from "./subComp/one";
 import Two from "./subComp/two";
 import OneAlert from "./renderProps/one";
+import TwoAlert from "./renderProps/two";
+import OneHoc from "./hoc/oneHOC";
+import oneHOC from "./hoc/oneHOC";
+import twoHOC from "./hoc/twoHOC";
 
 const drawerWidth = 240;
 
@@ -139,18 +144,30 @@ class App extends Component {
           <ListItem>
             <Link to="/">Home</Link>
           </ListItem>
+
+          <ListSubheader>HOC</ListSubheader>
+          <ListItem>
+            <Link to="/higher-order-comp/1">Security</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/higher-order-comp/2">Lists</Link>
+          </ListItem>
+
+          <ListSubheader>Render Props</ListSubheader>
+          <ListItem>
+            <Link to="/render-props/1">Dialog Box</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/render-props/2">Custom Dialog Box</Link>
+          </ListItem>
+          <ListSubheader>Compound Component</ListSubheader>
           <ListItem>
             <Link to="/compound-comp/1">Form(s)</Link>
           </ListItem>
           <ListItem>
             <Link to="/compound-comp/2">Updated Form(s)</Link>
           </ListItem>
-          <ListItem>
-            <Link to="/render-props/1">Dialog Box</Link>
-          </ListItem>
-          <ListItem>
-            <Link to="/higher-order-comp/1">Security</Link>
-          </ListItem>
+          <ListSubheader>Context</ListSubheader>
         </List>
       </Drawer>
     );
@@ -183,6 +200,9 @@ class App extends Component {
             <Route path="/compound-comp/1" component={One} />
             <Route path="/compound-comp/2" component={Two} />
             <Route path="/render-props/1" component={OneAlert} />
+            <Route path="/render-props/2" component={TwoAlert} />
+            <Route path="/higher-order-comp/1" component={oneHOC} />
+            <Route path="/higher-order-comp/2" component={twoHOC} />
           </main>
         </CssBaseline>
       </Router>
