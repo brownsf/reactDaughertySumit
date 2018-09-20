@@ -25,6 +25,7 @@ import TwoAlert from "./renderProps/two";
 import OneHoc from "./hoc/oneHOC";
 import oneHOC from "./hoc/oneHOC";
 import twoHOC from "./hoc/twoHOC";
+import Context from "./context/two";
 
 const drawerWidth = 240;
 
@@ -168,6 +169,9 @@ class App extends Component {
             <Link to="/compound-comp/2">Updated Form(s)</Link>
           </ListItem>
           <ListSubheader>Context</ListSubheader>
+          <ListItem>
+            <Link to="/context">Context</Link>
+          </ListItem>
         </List>
       </Drawer>
     );
@@ -203,6 +207,7 @@ class App extends Component {
             <Route path="/render-props/2" component={TwoAlert} />
             <Route path="/higher-order-comp/1" component={oneHOC} />
             <Route path="/higher-order-comp/2" component={twoHOC} />
+            <Route path="/context" component={Context}/>
           </main>
         </CssBaseline>
       </Router>

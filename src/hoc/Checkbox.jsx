@@ -6,8 +6,9 @@ import Checkbox from '@material-ui/core/Checkbox'
 const Check = (props) => {
     return (
         <div>
-            {props.list.map(item => (
+            {props.list.map((item,i) => (
                 <FormControlLabel
+                    key={i}
                     control={
                         <Checkbox
                             
