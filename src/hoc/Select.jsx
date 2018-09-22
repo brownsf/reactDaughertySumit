@@ -5,7 +5,7 @@ class Select extends Component {
         return (
             <div>
                 <select>
-                    <option></option>
+                    <option>Select...</option>
                     {this.props.list.map(item => <option value={item.val}>{item.label}</option>)}
                 </select>
             </div>
